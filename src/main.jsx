@@ -14,7 +14,8 @@ import Login from './Components/Login/Login';
 import FirebaseProvider from './FirebaseProvider/FirebaseProvider';
 import UpdateProfile from './Components/UpdateProfile/UpdateProfile';
 import UserProfile from './Components/userProfile/userProfile';
-
+import AddCraft from './Components/AddCraft/AddCraft';
+import UpdateCraft from './Components/UpdateCraft/UpdateCraft';
 
 const router = createBrowserRouter([
   {
@@ -41,7 +42,15 @@ const router = createBrowserRouter([
       {
         path: "/userProfile",
         element: <UserProfile></UserProfile>
-      }
+      },
+      {
+        path: "/addCraft",
+        element: <AddCraft></AddCraft>
+      },
+      {
+        path: "/updateCraft",
+        element: <UpdateCraft></UpdateCraft>
+      },
     ]
   },
 ]);

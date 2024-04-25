@@ -22,9 +22,17 @@ const Home = () => {
             <section className="p-6 dark:bg-gray-100 dark:text-gray-800">
                 <div className="flex flex-col lg:flex-row justify-center items-center container mx-auto">
                     <div className="w-full px-6 py-16 rounded-md sm:px-12 md:px-16 xl:col-span-2 dark:bg-gray-50">
-                        <h1 className="text-5xl font-extrabold dark:text-gray-900">Change</h1>
-                        <h1 className="text-5xl font-extrabold dark:text-gray-900 text-center">The Way <span className='text-7xl'>You</span></h1>
-                        <h1 className="text-5xl font-extrabold dark:text-gray-900 text-right">Change The World</h1>
+                        
+                        <div className="bg-gradient-to-r from-[#035F64] to-[#B2E5F3] text-transparent bg-clip-text">
+                            <h1 className="text-5xl font-extrabold text-gradient-to-r from-cyan-500 to-blue-500">Change</h1>
+                        </div>
+                        <div className="bg-gradient-to-r from-[#19641B] to-[#16BC0F] text-transparent bg-clip-text">
+                            <h1 className="text-5xl font-extrabold text-center">The Way <span className='text-7xl'>You</span></h1>
+                        </div>
+                        <div className="bg-gradient-to-r from-[#0E1891] to-[#A95B09] text-transparent bg-clip-text">
+                            <h1 className="text-5xl font-extrabold text-right">Change The World</h1>
+                        </div>
+                       
                         <p className="my-8">Nafshi where artistic elegance meets seamless customization, like brushstrokes on canvas. A haven for both seasoned artists and novices, offering myriad features to craft unique masterpieces.
                         </p>
                     </div>

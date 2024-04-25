@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import useAuth from "../UseAuth/useAuth";
-
+import myImage from "../../assets/images/aura-removebg-preview.png"
 const Header = () => {
     const [theme, setTheme] = useState('light')
 
@@ -52,20 +52,28 @@ const Header = () => {
                         className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 gap-10">
                         <Link to="/">Home</Link>
                         <Link to="/register">Register</Link>
-                        <Link to="/login">Login</Link>
                         <Link to="/userProfile">Update Profile</Link>
                         <Link to="/userProfile">User Profile</Link>
+                        <Link to="/addCraft">Add Craft</Link>
+                        <Link to="/updateCraft">Update Craft</Link>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-sm lg:text-xl">Artisan Aura</a>
+                <div className="flex -space-x-10 items-center">
+                    <img className="w-28" src={myImage} alt="" />
+                    
+                    <div className="bg-gradient-to-r from-[#03cdb5] to-[#C8143A] text-transparent bg-clip-text">
+                        <a className="btn btn-ghost text-sm lg:text-2xl font-extrabold">Artisan Aura</a>
+                    </div>
+                </div>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-10">
                     <Link to="/">Home</Link>
                     <Link to="/register">Register</Link>
-                    <Link to="/login">Login</Link>
                     <Link to="/updateProfile">Update Profile</Link>
                     <Link to="/userProfile">User Profile</Link>
+                    <Link to="/addCraft">Add Craft</Link>
+                    <Link to="/updateCraft">Update Craft</Link>
                 </ul>
             </div>
             {
@@ -90,13 +98,13 @@ const Header = () => {
                             </div>
                             <button
                                 onClick={handleSignOut}
-                                className="p-1 rounded  bg-[#71B100] text-white border-none">Logout</button>
+                                className="p-1 rounded  bg-gradient-to-r from-[#03cdb5] to-[#0CBFDD] text-white border-none">Logout</button>
                         </div>
                     )
                     : (
                         <div className="navbar-end">
                             <Link to="/login">
-                                <button onClick={logout} className="btn bg-[#71B100] text-white border-none">
+                                <button onClick={logout} className="btn bg-gradient-to-r from-[#03cdb5] to-[#0CBFDD] text-white border-none">
                                     Login
                                 </button>
                             </Link>
