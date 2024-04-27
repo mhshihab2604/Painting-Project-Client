@@ -52,7 +52,7 @@ const Register = () => {
                 <title>Register</title>
             </Helmet>
             <div
-                className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-base-100 shadow-2xl dark:text-gray-800 mx-auto mt-10">
+                className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gradient-to-r from-[#03cdb5] to-[#C8143A] dark:text-black mx-auto mt-10">
                 <h1 className="text-3xl font-bold text-center">Register Now</h1>
                 <form
                     onSubmit={handleSubmit(onSubmit)}
@@ -116,12 +116,12 @@ const Register = () => {
                         </div>
                     </div>
                     <button
-                        className="block w-full p-3 text-center rounded-sm dark:text-gray-50 dark:bg-[#71B100]">Register</button>
+                        className="block w-full p-3 text-center rounded-sm dark:text-gray-50 bg-gradient-to-r from-[#DD9895] to-[#B2E5F3] border-2">Register</button>
                 </form>
                 {registerError && <p className="text-red-500 font-medium">{registerError}</p>}
                 <p className="text-xs text-center sm:px-6 dark:text-gray-600">Don not have an account?
                     <Link to="/login">
-                        <a rel="noopener noreferrer" href="#" className="underline dark:text-gray-800">Login</a>
+                        <a rel="noopener noreferrer" href="#" className="underline  dark:text-gray-800">Login</a>
                     </Link>
                 </p>
             </div>

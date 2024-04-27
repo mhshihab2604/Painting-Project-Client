@@ -55,7 +55,6 @@ const Header = () => {
                         <Link to="/register">Register</Link>
                         <Link to="/userProfile">Update Profile</Link>
                         <Link to="/addCraft">Add Craft</Link>
-                        <Link to="/updateCraft">Update Craft</Link>
                     </ul>
                 </div>
                 <div className="flex -space-x-10 items-center">
@@ -73,7 +72,6 @@ const Header = () => {
                     <Link to="/register">Register</Link>
                     <Link to="/updateProfile">Update Profile</Link>
                     <Link to="/addCraft">Add Craft</Link>
-                    <Link to="/updateCraft">Update Craft</Link>
                 </ul>
             </div>
             {

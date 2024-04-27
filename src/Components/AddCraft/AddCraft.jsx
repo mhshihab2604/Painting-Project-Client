@@ -46,8 +46,8 @@ const AddCraft = () => {
             <section className="p-6 dark:text-gray-800">
                 <form onSubmit={handleAddCraft} className="container w-full p-8 mx-auto dark:text-black space-y-6 rounded-md shadow bg-gradient-to-r from-[#03cdb5] to-[#C8143A]">
                     <h2 className="w-full text-3xl font-bold text-center">Add Craft</h2>
-                    <section className="flex justify-between pt-10 gap-10">
-                        <div className="w-1/2">
+                    <section className="flex flex-col lg:flex-row justify-between pt-10 gap-10">
+                        <div className="w-full lg:w-1/2">
                             <div className="form-control">
                                 <label className="block mb-1 ml-1">User Name</label>
                                 <input name="name" type="text" placeholder="Enter Name" required="" className="block w-full border-2 p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:dark:ring-[#331A15] dark:bg-gray-100" />
@@ -69,7 +69,7 @@ const AddCraft = () => {
                                 <input type="text" name="customization" placeholder="Enter Customization" required="" className="block w-full border-2 p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:dark:ring-[#331A15] dark:bg-gray-100" />
                             </div>
                         </div>
-                        <div className="w-1/2">
+                        <div className="w-full lg:w-1/2">
                             <div className="form-control">
                                 <label className="block mb-1 ml-1">Stock Status </label>
                                 <input type="text" name="stock" placeholder="Stock Status " required="" className="block w-full border-2 p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:dark:ring-[#331A15] dark:bg-gray-100" />

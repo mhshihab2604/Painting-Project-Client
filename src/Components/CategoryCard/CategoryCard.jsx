@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 
 const CategoryCard = ({category}) => {
     const{ name, image} = category || {};
+    const id = name.split(' ').join('&')
+    console.log(id);
     return (
         <div>
             <div className="card w-72 h-96 bg-base-100 shadow-xl border-2 p-2">
@@ -11,7 +13,7 @@ const CategoryCard = ({category}) => {
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">{name}</h2>
                     <div className="card-actions">
-                    <Link to="/categoriesCard"><button className="btn bg-gradient-to-r from-[#03cdb5] to-[#0CBFDD]">Details</button></Link>
+                    <Link to={`/category/${id}`}><button className="btn bg-gradient-to-r from-[#03cdb5] to-[#0CBFDD]">Details</button></Link>
                     </div>
                 </div>
             </div>
