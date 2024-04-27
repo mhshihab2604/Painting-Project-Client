@@ -16,6 +16,10 @@ import UpdateProfile from './Components/UpdateProfile/UpdateProfile';
 import UserProfile from './Components/userProfile/userProfile';
 import AddCraft from './Components/AddCraft/AddCraft';
 import UpdateCraft from './Components/UpdateCraft/UpdateCraft';
+import PaintingCardDetails from './Components/PaintingCardDetails/PaintingCardDetails';
+import CategoriesCard from './Components/CategoriesCard/CategoriesCard';
+import MyCraftList from './Components/ MyCraftList/ MyCraftList';
+import AllArtCraft from './Components/AllArtCraft/AllArtCraft';
 
 const router = createBrowserRouter([
   {
@@ -25,7 +29,12 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: () => fetch('http://localhost:5000/category')
+      },
+      {
+        path: "/allArtCraft",
+        element: <AllArtCraft></AllArtCraft>
       },
       {
         path: "/register",
@@ -48,9 +57,24 @@ const router = createBrowserRouter([
         element: <AddCraft></AddCraft>
       },
       {
-        path: "/updateCraft",
-        element: <UpdateCraft></UpdateCraft>
+        path: "/updateCraft/:id",
+        element: <UpdateCraft></UpdateCraft>,
+        loader: ({params}) => fetch(`http://localhost:5000/painting/${params.id}`)
       },
+      {
+        path: "/myCraftList",
+        element: <MyCraftList></MyCraftList>
+      },
+      {
+        path: "/categoriesCard",
+        element: <CategoriesCard></CategoriesCard>,
+        loader: () => fetch('http://localhost:5000/painting')
+      },
+      {
+        path: "/painting/:_id",
+        element: <PaintingCardDetails></PaintingCardDetails>,
+        loader: () => fetch('http://localhost:5000/painting')
+      }
     ]
   },
 ]);

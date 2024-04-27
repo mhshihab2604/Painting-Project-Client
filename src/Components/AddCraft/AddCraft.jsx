@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet';
+import Swal from 'sweetalert2'
 const AddCraft = () => {
     const handleAddCraft = e => {
         e.preventDefault();
@@ -16,6 +17,26 @@ const AddCraft = () => {
         const image = form.image.value;
         const newCraft = {name, email, item_name, subcategory_name, customization, stock, processing_time, price, rating, short_description, image}
         console.log(newCraft);
+        // send data to the server
+        fetch('http://localhost:5000/painting', {
+            method: 'POST',
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(newCraft)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Successful!',
+                    text: 'User Added Successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                })
+            }
+        })
     }
     return (
         <div>

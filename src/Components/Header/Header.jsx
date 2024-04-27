@@ -51,9 +51,9 @@ const Header = () => {
                         tabIndex={0}
                         className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 gap-10">
                         <Link to="/">Home</Link>
+                        <Link to="/allArtCraft">All Art&Craft</Link>
                         <Link to="/register">Register</Link>
                         <Link to="/userProfile">Update Profile</Link>
-                        <Link to="/userProfile">User Profile</Link>
                         <Link to="/addCraft">Add Craft</Link>
                         <Link to="/updateCraft">Update Craft</Link>
                     </ul>
@@ -69,9 +69,9 @@ const Header = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-10">
                     <Link to="/">Home</Link>
+                    <Link to="/allArtCraft">All Art&Craft</Link>
                     <Link to="/register">Register</Link>
                     <Link to="/updateProfile">Update Profile</Link>
-                    <Link to="/userProfile">User Profile</Link>
                     <Link to="/addCraft">Add Craft</Link>
                     <Link to="/updateCraft">Update Craft</Link>
                 </ul>
@@ -80,9 +80,7 @@ const Header = () => {
                 user
                     ? (
                         <div className="navbar-end relative space-x-2">
-                            <div
-                                className="lg:tooltip lg:tooltip-left"
-                                data-tip={`${user.displayName},${user.email}`}>
+                            <div>
                                 <img
                                     className="w-10 h-10 rounded-full"
                                     src={user.photoURL}
@@ -95,6 +93,7 @@ const Header = () => {
                                     : "userDropDown"}>
                                 <h1 className="text-xl font-medium">Name:{user.displayName}</h1>
                                 <h1 className="font-medium">{user.email}</h1>
+                                <Link to="/userProfile"><button className="btn bg-gradient-to-r from-[#03cdb5] to-[#0CBFDD]">User Profile</button></Link>
                             </div>
                             <button
                                 onClick={handleSignOut}

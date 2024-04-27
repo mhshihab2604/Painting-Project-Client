@@ -1,5 +1,7 @@
 import {useCallback, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
+import { useLoaderData } from 'react-router-dom';
+import CategoryCard from '../CategoryCard/CategoryCard';
 const Home = () => {
     const [currentSlider, setCurrentSlider] = useState(0);
     const carouselImages = ['https://i.ibb.co/8cX0d6v/assign1.jpg','https://i.ibb.co/LNSzLND/assign2.jpg','https://i.ibb.co/mNTV8Rw/assign4.jpg','https://i.ibb.co/2s4dv5k/assign5.jpg'];
@@ -14,6 +16,9 @@ const Home = () => {
         return () => clearInterval(intervalId);
     }, [nextSlider]);
   
+    // const paintings = useLoaderData();
+    const categories = useLoaderData();
+
     return (
         <div>
             <Helmet>
@@ -62,6 +67,12 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+            <section className='mt-28'>
+                <h2 className="text-3xl lg:text-5xl font-bold  text-center mx-auto">Painting We Offers</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 mx-auto container">
+                    {categories?.map(category => <CategoryCard key={category._id} category={category}></CategoryCard>)}
                 </div>
             </section>
         </div>
