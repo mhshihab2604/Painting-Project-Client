@@ -45,7 +45,7 @@ const UpdateProfile = () => {
             <title>Update Profile</title>
         </Helmet>
         <div
-            className="flex flex-col mx-auto max-w-md p-6 dark:bg-base-100 shadow-2xl rounded-md sm:p-10 mt-10 dark:text-gray-800">
+            className="flex flex-col mx-auto max-w-md p-6 bg-gradient-to-r from-[#03cdb5] to-[rgb(12,191,221)] dark:text-black shadow-2xl rounded-md sm:p-10 mt-10">
             <div className="mb-8 text-center">
                 <h1 className="my-3 text-4xl font-bold">Update Profile</h1>
                 <p className="text-sm dark:text-gray-600">Update Your Profile</p>
@@ -91,7 +91,7 @@ const UpdateProfile = () => {
                     <div>
                         <button
                             type="submit"
-                            className="w-full px-8 py-3 font-semibold rounded-md dark:bg-[#71B100] dark:text-gray-50">Update Profile</button>
+                            className="w-full px-8 py-3 rounded-md bg-gradient-to-r from-[#ff453e] to-[#43b3d2] font-semibold border-2 dark:text-gray-50">Update Profile</button>
                     </div>
                 </div>
             </form>

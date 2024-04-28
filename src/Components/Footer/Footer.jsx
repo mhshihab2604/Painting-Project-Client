@@ -5,7 +5,7 @@ import Marquee from "react-fast-marquee";
 const Footer = () => {
     return (
         <div>
-            <div className='mt-40 mx-auto bg-[#F5F5F5] pb-10'>
+            <div className='mt-40 mx-auto pb-10'>
                 <Marquee speed={100}>
                     <div className="flex justify-center gap-20">
                         <img className="w-[250px] h-[200px] " src="https://m.media-amazon.com/images/I/91ecnaKECdL.jpg" alt="" />

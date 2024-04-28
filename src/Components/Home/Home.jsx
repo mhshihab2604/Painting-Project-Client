@@ -4,6 +4,7 @@ import { useLoaderData } from 'react-router-dom';
 import CategoryCard from '../CategoryCard/CategoryCard';
 import { Fade } from "react-awesome-reveal";
 import CraftItemCard from '../CraftItemCard/CraftItemCard';
+import WhyChoose from '../WhyChoose/WhyChoose';
 // import CraftItemsSection from '../CraftItemsSection/CraftItemsSection';
 const Home = () => {
     const [currentSlider, setCurrentSlider] = useState(0);
@@ -92,6 +93,8 @@ const Home = () => {
                     {categories?.map(category => <CategoryCard key={category._id} category={category}></CategoryCard>)}
                 </div>
             </section>
+
+            <WhyChoose></WhyChoose>
         </div>
     );
 };

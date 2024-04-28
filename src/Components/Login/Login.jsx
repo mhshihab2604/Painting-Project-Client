@@ -76,7 +76,7 @@ const Login = () => {
                         </div>
                     </div>
                     <button
-                        className="block w-full p-3 text-center rounded-sm dark:text-white bg-gradient-to-r from-[#DD9895] to-[#B2E5F3] border-2">
+                        className="block w-full p-3 text-center rounded-sm dark:text-white bg-gradient-to-r from-[#ff453e] to-[#43b3d2] font-semibold border-2">
                         Login
                     </button>
                 </form>

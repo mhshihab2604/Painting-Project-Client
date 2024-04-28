@@ -1,0 +1,162 @@
+
+.chooseUsCon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.ourContent {
+    gap: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffff;
+    box-shadow: 5px 5px 5px 5px;
+    padding: 40px 0;
+}
+
+.leftSide {
+
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    flex-direction: column;
+    gap: 27px;
+}
+
+.leftSide h1 {
+    font-size: 51px;
+    color: #ff5f67;
+    font-weight: 500;
+}
+
+.leftSide p {
+    font-size: 18px;
+    width: 800px;
+}
+
+.rightSide {
+    display: grid;
+    gap: 26px;
+    grid-template-columns: repeat(2, 380px);
+}
+
+.myCard {
+    width: 380px;
+    height: 280px;
+    box-shadow: 0 2px 16.8px 3.2px #00264214;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    flex-direction: column;
+    gap: 25px;
+    background:linear-gradient(90deg,rgb(3, 205, 181) 0%, rgb(12,191,221) 35%, rgba(0,212,255,1) 100%);
+    border-radius: 34px;
+}
+
+.myIcon {
+    background:linear-gradient(90deg,rgb(3, 205, 181) 0%, rgb(200, 20, 58) 35%, rgba(0,212,255,1) 100%);
+    padding: 12px;
+    font-size: 54px;
+    color: white;
+    border-radius: 50%;
+}
+
+.cardBottom {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.cardBottom h1 {
+    font-size: 30px;
+}
+
+.cardBottom p {
+    font-size: 15px;
+}
+
+
+@media screen and (max-width: 400px) {
+    .ourContent {
+        flex-direction: column-reverse;
+    }
+
+    .leftSide {
+        display: none;
+    }
+
+    .ourContent {
+        flex-direction: column-reverse;
+    }
+
+    .rightSide {
+        grid-template-columns: repeat(1, 380px);
+    }
+
+    .chooseTittle h1 {
+        font-size: 45px;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 840px) {
+    .ourContent {
+        flex-direction: column-reverse;
+    }
+
+    .leftSide {
+        display: none;
+    }
+
+    .ourContent {
+        flex-direction: column-reverse;
+    }
+
+    .rightSide {
+        grid-template-columns: repeat(1, 380px);
+    }
+
+    .chooseTittle h1 {
+        font-size: 45px;
+    }
+}
+
+@media screen and (min-width: 840px) and (max-width: 1500px) {
+
+    .ourContent {
+        flex-direction: column-reverse;
+    }
+
+    .rightSide {
+        grid-template-columns: repeat(1, 380px);
+    }
+
+
+}
+
+@media screen and (min-width: 1500px) and (max-width: 1690px) {
+
+    .myCard {
+        width: 280px;
+    }
+
+    .rightSide {
+        grid-template-columns: repeat(2, 280px);
+    }
+
+    .cardBottom h1 {
+        font-size: 26px;
+    }
+
+    .cardBottom p {
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 1921px) {}
