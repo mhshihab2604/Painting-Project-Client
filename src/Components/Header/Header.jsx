@@ -52,6 +52,7 @@ const Header = () => {
                         className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 gap-10">
                         <Link to="/">Home</Link>
                         <Link to="/allArtCraft">All Art&Craft</Link>
+                        <Link to="/myCraftList">My Art&Craft</Link>
                         <Link to="/register">Register</Link>
                         <Link to="/userProfile">Update Profile</Link>
                         <Link to="/addCraft">Add Craft</Link>
@@ -69,6 +70,7 @@ const Header = () => {
                 <ul className="menu menu-horizontal px-1 gap-10">
                     <Link to="/">Home</Link>
                     <Link to="/allArtCraft">All Art&Craft</Link>
+                    <Link to="/myCraftList">My Art&Craft</Link>
                     <Link to="/register">Register</Link>
                     <Link to="/updateProfile">Update Profile</Link>
                     <Link to="/addCraft">Add Craft</Link>

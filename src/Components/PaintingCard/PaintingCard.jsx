@@ -31,12 +31,12 @@ const PaintingCard = ({painting}) => {
                 </div>
                 <hr className="border-dashed" />
                 <div className="flex justify-between bg-[#F3F3F3] p-2 text-[#131313CC] font-semibold">
-                    <p data-aos="fade-up">{price}</p>
+                    <p data-aos="fade-up">{price}$</p>
                     <p className="flex items-center gap-1" data-aos="fade-up"><PiSquareLogoBold></PiSquareLogoBold>{stock}</p>
                 </div>
                 <div>
                     <Link to={`/painting/${_id}`}>
-                        <button className="btn w-full text-white bg-gradient-to-r from-[#03cdb5] to-[#0CBFDD]">View Properties</button>
+                        <button className="btn w-full text-white bg-gradient-to-r from-[#03cdb5] to-[#0CBFDD]">View Details</button>
                     </Link>
                 </div>
                 
