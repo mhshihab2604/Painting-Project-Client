@@ -1,9 +1,21 @@
 import { IoIosCall } from "react-icons/io";
 import { BiSolidMessage } from "react-icons/bi";
 import { GoClockFill } from "react-icons/go";
+import Marquee from "react-fast-marquee";
 const Footer = () => {
     return (
         <div>
+            <div className='mt-40 mx-auto bg-[#F5F5F5] pb-10'>
+                <Marquee speed={100}>
+                    <div className="flex justify-center gap-20">
+                        <img className="w-[250px] h-[200px] " src="https://m.media-amazon.com/images/I/91ecnaKECdL.jpg" alt="" />
+                        <img className="w-[250px] h-[200px]" src="https://cdn.shopify.com/s/files/1/0625/3818/6989/files/1_07e7770a-7a1a-4dfe-83be-b502b2d47d57.jpg?v=1677310581" alt="" />
+                        <img className="w-[250px] h-[200px]" src="https://static.skillshare.com/uploads/project/462615/cover_full_5c88fd9328732fc40f60bbf2fe7bdd56.jpg" alt="" />
+                        <img className="w-[250px] h-[200px]" src="https://www.artsindia.com/cdn/shop/products/Jayden_india_gate_black_and_white_illustration_clean_white_back_827759a0-381f-4b0a-9927-d49a116183ec.png?v=1676272753" alt="" />
+                        <img className="w-[250px] h-[200px]" src="https://img.freepik.com/premium-vector/modern-abstract-art-watercolor-floral-illustration-golden-elements-watercolor-painting-children_899391-2134.jpg" alt="" />
+                    </div>
+                </Marquee>
+            </div>
             <footer className="p-10 bg-[#003733] text-white">
                 <div className="footer items-center max-w-7xl mx-auto">
                     <aside className="space-y-4">

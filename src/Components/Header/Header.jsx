@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import useAuth from "../UseAuth/useAuth";
 import myImage from "../../assets/images/aura-removebg-preview.png"
+import { Tooltip } from 'react-tooltip'
 const Header = () => {
     const [theme, setTheme] = useState('light')
 
@@ -80,7 +81,8 @@ const Header = () => {
                 user
                     ? (
                         <div className="navbar-end relative space-x-2">
-                            <div>
+                            <div data-tooltip-id="my-tooltip" data-tooltip-content={user.displayName} data-tooltip-place="left">
+                                <Tooltip id="my-tooltip" />
                                 <img
                                     className="w-10 h-10 rounded-full"
                                     src={user.photoURL}

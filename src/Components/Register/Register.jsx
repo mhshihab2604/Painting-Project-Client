@@ -52,7 +52,7 @@ const Register = () => {
                 <title>Register</title>
             </Helmet>
             <div
-                className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gradient-to-r from-[#03cdb5] to-[#C8143A] dark:text-black mx-auto mt-10">
+                className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gradient-to-r from-[#03cdb5] to-[#0CBFDD] dark:text-black mx-auto mt-10">
                 <h1 className="text-3xl font-bold text-center">Register Now</h1>
                 <form
                     onSubmit={handleSubmit(onSubmit)}

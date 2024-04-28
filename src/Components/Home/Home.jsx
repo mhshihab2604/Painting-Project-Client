@@ -2,6 +2,9 @@ import {useCallback, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { useLoaderData } from 'react-router-dom';
 import CategoryCard from '../CategoryCard/CategoryCard';
+import { Fade } from "react-awesome-reveal";
+import CraftItemCard from '../CraftItemCard/CraftItemCard';
+// import CraftItemsSection from '../CraftItemsSection/CraftItemsSection';
 const Home = () => {
     const [currentSlider, setCurrentSlider] = useState(0);
     const carouselImages = ['https://i.ibb.co/8cX0d6v/assign1.jpg','https://i.ibb.co/LNSzLND/assign2.jpg','https://i.ibb.co/mNTV8Rw/assign4.jpg','https://i.ibb.co/2s4dv5k/assign5.jpg'];
@@ -15,10 +18,15 @@ const Home = () => {
         }, 3000);
         return () => clearInterval(intervalId);
     }, [nextSlider]);
-  
-    // const paintings = useLoaderData();
     const categories = useLoaderData();
 
+    const [paintings, setPaintings] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:5000/painting")
+            .then(res => res.json())
+            .then(data => setPaintings(data));
+    }, [])
     return (
         <div>
             <Helmet>
@@ -37,9 +45,10 @@ const Home = () => {
                         <div className="bg-gradient-to-r from-[#0E1891] to-[#A95B09] text-transparent bg-clip-text">
                             <h1 className="text-5xl font-extrabold text-right">Change The World</h1>
                         </div>
-                       
-                        <p className="my-8">Nafshi where artistic elegance meets seamless customization, like brushstrokes on canvas. A haven for both seasoned artists and novices, offering myriad features to craft unique masterpieces.
-                        </p>
+                        <Fade duration={2000}>
+                            <p className="my-8">Nafshi where artistic elegance meets seamless customization, like brushstrokes on canvas. A haven for both seasoned artists and novices, offering myriad features to craft unique masterpieces.
+                            </p>
+                        </Fade>
                     </div>
                     {/* <img src="https://i.ibb.co/hKTPKyd/vu-anh-Ti-VPTYCG-3-E-unsplash.jpg" alt="" className="object-cover w-full rounded-md xl:col-span-3 dark:bg-gray-500" /> */}
                     <div>
@@ -69,6 +78,14 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            
+            <section className="max-w-6xl mx-auto mt-32">
+                <h2 className="text-3xl lg:text-5xl font-bold  text-center mx-auto">Craft Items Section</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 mx-2">
+                    {paintings.slice(1, 7).map(painting => <CraftItemCard key={painting.id} painting={painting}></CraftItemCard>)}
+                </div>
+            </section>
+
             <section className='mt-28 mx-6'>
                 <h2 className="text-3xl lg:text-5xl font-bold  text-center">Painting We Offers</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 mx-auto container">

@@ -31,7 +31,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/category')
+        loader: () => fetch('http://localhost:5000/category'),
       },
       {
         path: "/allArtCraft",
@@ -76,6 +76,7 @@ const router = createBrowserRouter([
       {
         path: "/category/:id",
         element: <CategoriesCard></CategoriesCard>,
+        
       },
       {
         path: "/painting/:_id",

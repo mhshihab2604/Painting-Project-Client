@@ -56,7 +56,6 @@ const PaintingCardDetails = () => {
                         </div>
                     </div>
                     <div>
-                        <button className="w-full rounded-lg bg-gradient-to-r from-[#03cdb5] to-[#0CBFDD] px-6 py-2 text-[12px] font-semibold text-white hover:bg-slate-900 sm:text-sm md:text-base">Add to Cart</button>
                         <Link to={`/updateCraft/${_id}`}>
                             <button className="btn w-full text-white bg-gradient-to-r from-[#03cdb5] to-[#0CBFDD]">Update Craft</button>
                         </Link>
