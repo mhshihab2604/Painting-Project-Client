@@ -21,15 +21,17 @@ const FirebaseProvider = ({children}) => {
     const [refetchUser, setRefetchUser] = useState(false)
     const [user, setUser] = useState(null)
     console.log(user);
-
+    const [loader, setLoader] = useState(true);
     // create user
     const createUser = (email, password) => {
+        setLoader(true);
         return createUserWithEmailAndPassword(auth, email, password)
         // .then(result => console.log(result.user))
     }
 
     // sign in user
     const signInUser = (email, password) => {
+        setLoader(true);
         return signInWithEmailAndPassword(auth, email, password)
     }
 
@@ -43,11 +45,13 @@ const FirebaseProvider = ({children}) => {
     }
     // google login
     const googleLogin = () => {
+        setLoader(true);
         return signInWithPopup(auth, googleProvider)
     }
 
     // github login
     const githubLogin = () => {
+        setLoader(true);
         return signInWithPopup(auth, githubProvider)
     }
 
@@ -61,6 +65,7 @@ const FirebaseProvider = ({children}) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             setUser(user)
+            setLoader(false);
         });
         return() => unsubscribe();
     }, [refetchUser])
@@ -74,7 +79,9 @@ const FirebaseProvider = ({children}) => {
         githubLogin,
         UpdateUserProfile,
         refetchUser,
-        setRefetchUser
+        setRefetchUser,
+        loader, 
+        setLoader
     }
 
     return (

@@ -36,7 +36,7 @@ const PaintingCardDetails = () => {
                         <div>
                             <label className="text-xl font-medium" htmlFor="color">Rating:</label>
                             <div className="mt-2 flex items-center gap-3" id="color">
-                                <h1 className="rounded-full bg-[#F3F3F3] px-5 py-2 font-medium">{painting.rating}</h1>
+                                <h1 className="rounded-full bg-gray-400 px-5 py-2 font-medium">{painting.rating}</h1>
                                 <div className="rating">
                                     <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                                     <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked />

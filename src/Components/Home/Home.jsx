@@ -38,20 +38,19 @@ const Home = () => {
                     <div className="w-full px-6 py-16 rounded-md sm:px-12 md:px-16 xl:col-span-2 dark:bg-gray-50">
                         
                         <div className="bg-gradient-to-r from-[#035F64] to-[#B2E5F3] text-transparent bg-clip-text">
-                            <h1 className="text-5xl font-extrabold text-gradient-to-r from-cyan-500 to-blue-500">Change</h1>
+                            <h1 className="text-5xl font-extrabold lg:text-start text-center  text-gradient-to-r from-cyan-500 to-blue-500">Change</h1>
                         </div>
                         <div className="bg-gradient-to-r from-[#19641B] to-[#16BC0F] text-transparent bg-clip-text">
                             <h1 className="text-5xl font-extrabold text-center">The Way <span className='text-7xl'>You</span></h1>
                         </div>
                         <div className="bg-gradient-to-r from-[#0E1891] to-[#A95B09] text-transparent bg-clip-text">
-                            <h1 className="text-5xl font-extrabold text-right">Change The World</h1>
+                            <h1 className="text-5xl font-extrabold text-center lg:text-right">Change The World</h1>
                         </div>
                         <Fade duration={2000}>
-                            <p className="my-8">Nafshi where artistic elegance meets seamless customization, like brushstrokes on canvas. A haven for both seasoned artists and novices, offering myriad features to craft unique masterpieces.
+                            <p className="my-8 lg:text-start text-center">Nafshi where artistic elegance meets seamless customization, like brushstrokes on canvas. A haven for both seasoned artists and novices, offering myriad features to craft unique masterpieces.
                             </p>
                         </Fade>
                     </div>
-                    {/* <img src="https://i.ibb.co/hKTPKyd/vu-anh-Ti-VPTYCG-3-E-unsplash.jpg" alt="" className="object-cover w-full rounded-md xl:col-span-3 dark:bg-gray-500" /> */}
                     <div>
                         <div className="h-60 w-full lg:w-[700px] md:h-[470px] lg:h-[540px] relative overflow-hidden">
                             {/* arrow left */}
@@ -80,8 +79,8 @@ const Home = () => {
                 </div>
             </section>
             
-            <section className="max-w-6xl mx-auto mt-32">
-                <h2 className="text-3xl lg:text-5xl font-bold  text-center mx-auto">Craft Items Section</h2>
+            <section className="mt-32 max-w-6xl mx-auto">
+                <h2 className="text-3xl lg:text-5xl font-bold text-center">Craft Items Section</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 mx-2">
                     {paintings.slice(1, 7).map(painting => <CraftItemCard key={painting.id} painting={painting}></CraftItemCard>)}
                 </div>

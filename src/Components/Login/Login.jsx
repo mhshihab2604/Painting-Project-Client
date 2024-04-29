@@ -4,6 +4,7 @@ import SocialLogin from "../SocialLogin/SocialLogin";
 import {useLocation, useNavigate} from "react-router-dom";
 import {toast} from "sonner";
 import {Helmet} from 'react-helmet';
+import Swal from "sweetalert2";
 const Login = () => {
     const {signInUser} = useAuth();
 
@@ -23,6 +24,12 @@ const Login = () => {
                 if (result.user) {
                     toast.success("You have successfully logged in");
                     navigate(from);
+                    Swal.fire({
+                        title: 'Login Success!',
+                        text: 'User Login Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
                 }
             })
             .catch(() => {

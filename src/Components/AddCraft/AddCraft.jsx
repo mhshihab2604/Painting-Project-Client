@@ -1,6 +1,8 @@
 import { Helmet } from 'react-helmet';
 import Swal from 'sweetalert2'
+import useAuth from '../UseAuth/useAuth';
 const AddCraft = () => {
+    const {user} = useAuth();
     const handleAddCraft = e => {
         e.preventDefault();
         const form = e.target;
@@ -29,11 +31,20 @@ const AddCraft = () => {
         .then(data => {
             console.log(data);
             if(data.insertedId){
-                Swal.fire({
-                    title: 'Successful!',
-                    text: 'User Added Successfully',
-                    icon: 'success',
-                    confirmButtonText: 'Cool'
+                fetch('http://localhost:5000/userCraft', {
+                    method: 'POST',
+                    headers: {
+                        'content-type' : 'application/json'
+                    },
+                    body: JSON.stringify({image,item_name,customization, stock ,price, rating,email:user?.email})
+                })
+                .then(() => {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Painting Updated Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                      })
                 })
             }
         })
@@ -44,7 +55,7 @@ const AddCraft = () => {
                 <title>Add Craft</title>
             </Helmet>
             <section className="p-6 dark:text-gray-800">
-                <form onSubmit={handleAddCraft} className="container w-full p-8 mx-auto dark:text-black space-y-6 rounded-md shadow bg-gradient-to-r from-[#03cdb5] to-[#C8143A]">
+                <form onSubmit={handleAddCraft} className="container w-full p-8 mx-auto dark:text-black space-y-6 rounded-md shadow bg-gradient-to-r from-[#03cdb5] to-[rgb(12,191,221)]">
                     <h2 className="w-full text-3xl font-bold text-center">Add Craft</h2>
                     <section className="flex flex-col lg:flex-row justify-between pt-10 gap-10">
                         <div className="w-full lg:w-1/2">
@@ -96,7 +107,7 @@ const AddCraft = () => {
                         <label className="block mb-1 ml-1">Image</label>
                         <input type="text" name="image" placeholder="Enter photo URL" required="" className="block w-full border-2 p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:dark:ring-[#331A15] dark:bg-gray-100" />
                     </div>
-                    <div className="bg-gradient-to-r from-[#DD9895] to-[#B2E5F3]">
+                    <div className="bg-gradient-to-r from-[#ff453e] to-[#43b3d2] font-semibold border-2">
                         <button type="submit" className="w-full px-4 py-2 font-bold rounded shadow focus:outline-none focus:ring hover:ring focus:ring-opacity-50 focus:dark:ring-[#331A15] hover:dark:ring-[#331A15] dark:text-gray-50">Add Craft</button>
                     </div>
                 </form>

@@ -48,7 +48,7 @@ const UpdateCraft = () => {
             <title>Update Craft</title>
         </Helmet>
         <section className="p-6 dark:text-gray-800">
-            <form onSubmit={handleUpdateCraft} className="container w-full p-8 mx-auto dark:text-black space-y-6 rounded-md shadow bg-gradient-to-r from-[#03cdb5] to-[#C8143A]">
+            <form onSubmit={handleUpdateCraft} className="container w-full p-8 mx-auto dark:text-black space-y-6 rounded-md shadow bg-gradient-to-r from-[#03cdb5] to-[rgb(12,191,221)]">
                 <h2 className="w-full text-3xl font-bold text-center">Update Craft</h2>
                 <section className="flex flex-col lg:flex-row justify-between pt-10 gap-10">
                     <div className="w-full lg:w-1/2">
@@ -100,7 +100,7 @@ const UpdateCraft = () => {
                     <label className="block mb-1 ml-1">Image</label>
                     <input type="text" name="image" defaultValue={image} placeholder="Enter photo URL" required="" className="block w-full border-2 p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:dark:ring-[#331A15] dark:bg-gray-100" />
                 </div>
-                <div className="bg-gradient-to-r from-[#DD9895] to-[#B2E5F3]">
+                <div className="bg-gradient-to-r from-[#ff453e] to-[#43b3d2] font-semibold border-2">
                     <button type="submit" className="w-full px-4 py-2 font-bold rounded shadow focus:outline-none focus:ring hover:ring focus:ring-opacity-50 focus:dark:ring-[#331A15] hover:dark:ring-[#331A15] dark:text-gray-50">Update Craft</button>
                 </div>
             </form>

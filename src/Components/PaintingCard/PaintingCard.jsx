@@ -11,12 +11,12 @@ const PaintingCard = ({painting}) => {
     const {_id,item_name, stock, price, rating, short_description, image} = painting || {};
     return (
         <div>
-            <div className="card w-full h-full card-compact bg-base-100 shadow-xl border-2 rounded-lg p-4 space-y-2" data-aos="fade-up">
+            <div className="card w-full h-full card-compact bg-white shadow-xl border-2 rounded-lg p-4 space-y-2" data-aos="fade-up">
                 <div>
                     <figure><img className="h-72 w-full" src={image} alt="Shoes"/></figure>
                 </div>
                 <div className="flex justify-around items-center  font-medium" data-aos="fade-up">
-                        <h1 className="rounded-full bg-[#F3F3F3] p-2 font-medium">Rating:{rating}</h1>
+                        <h1 className="rounded-full bg-gray-400 border-2 p-2 font-medium">Rating:{rating}</h1>
                         <div className="rating">
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked />

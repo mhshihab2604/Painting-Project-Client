@@ -6,6 +6,7 @@ import {FaEye} from "react-icons/fa";
 import {FaEyeSlash} from "react-icons/fa";
 import {toast} from "sonner";
 import {Helmet} from 'react-helmet';
+import Swal from "sweetalert2";
 const Register = () => {
 
     const {createUser, UpdateUserProfile, refetchUser, setRefetchUser} = useAuth();
@@ -39,6 +40,12 @@ const Register = () => {
                     setRefetchUser(!refetchUser)
                     toast.success("You have successfully register")
                     navigate(from);
+                    Swal.fire({
+                        title: 'Register Success!',
+                        text: 'User Register Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
                 })
             })
             .catch(() => {
