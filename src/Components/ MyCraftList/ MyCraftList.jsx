@@ -6,7 +6,6 @@ import { Helmet } from 'react-helmet';
 const MyCraftList = () => {
   const { user } = useAuth();
   const [crafts, setCrafts] = useState([]);
-
   useEffect(() => {
     fetch(`http://localhost:5000/userCraft/${user?.email}`)
       .then((res) => res.json())
@@ -38,7 +37,7 @@ const MyCraftList = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 mx-auto container">
           {crafts.map((craft) => (
-            <MyCraftCard key={craft.email} craft={craft} />
+            <MyCraftCard key={craft.email} crafts={crafts} setCrafts={setCrafts} craft={craft} />
           ))}
         </div>
       </section>
