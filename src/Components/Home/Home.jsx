@@ -23,7 +23,7 @@ const Home = () => {
     const [paintings, setPaintings] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/painting")
+        fetch("https://assignment-10-server-nine-nu.vercel.app/painting")
             .then(res => res.json())
             .then(data => setPaintings(data));
     }, [])

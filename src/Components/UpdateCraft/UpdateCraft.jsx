@@ -22,7 +22,7 @@ const UpdateCraft = () => {
         const updateCraft = {name, email, item_name, subcategory_name, customization, stock, processing_time, price, rating, short_description, image};
         console.log(updateCraft);
 
-        fetch(`http://localhost:5000/painting/${_id}` ,{
+        fetch(`https://assignment-10-server-nine-nu.vercel.app/painting/${_id}` ,{
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

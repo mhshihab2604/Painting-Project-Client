@@ -17,7 +17,7 @@ const MyCraftCard = ({craft, crafts, setCrafts}) => {
               }).then((result) => {
                 if (result.isConfirmed) {
                 
-                fetch(`http://localhost:5000/userCraft/${_id}`,{
+                fetch(`https://assignment-10-server-nine-nu.vercel.app/userCraft/${_id}`,{
                     method: 'DELETE'
                 })
                     .then(res => res.json())

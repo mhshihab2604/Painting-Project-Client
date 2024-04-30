@@ -7,7 +7,7 @@ const MyCraftList = () => {
   const { user } = useAuth();
   const [crafts, setCrafts] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/userCraft/${user?.email}`)
+    fetch(`https://assignment-10-server-nine-nu.vercel.app/userCraft/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) {

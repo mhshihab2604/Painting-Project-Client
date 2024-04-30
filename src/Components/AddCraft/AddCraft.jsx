@@ -20,7 +20,7 @@ const AddCraft = () => {
         const newCraft = {name, email, item_name, subcategory_name, customization, stock, processing_time, price, rating, short_description, image}
         console.log(newCraft);
         // send data to the server
-        fetch('http://localhost:5000/painting', {
+        fetch('https://assignment-10-server-nine-nu.vercel.app/painting', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'
@@ -31,7 +31,7 @@ const AddCraft = () => {
         .then(data => {
             console.log(data);
             if(data.insertedId){
-                fetch('http://localhost:5000/userCraft', {
+                fetch('https://assignment-10-server-nine-nu.vercel.app/userCraft', {
                     method: 'POST',
                     headers: {
                         'content-type' : 'application/json'

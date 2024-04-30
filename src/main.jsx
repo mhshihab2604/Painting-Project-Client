@@ -32,12 +32,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/category'),
+        loader: () => fetch('https://assignment-10-server-nine-nu.vercel.app/category'),
       },
       {
         path: "/allArtCraft",
         element: <AllArtCraft></AllArtCraft>,
-        loader: () => fetch('http://localhost:5000/painting')
+        loader: () => fetch('https://assignment-10-server-nine-nu.vercel.app/painting')
       },
       {
         path: "/register",
@@ -68,7 +68,7 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
           <UpdateCraft></UpdateCraft>
         </PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/painting/${params.id}`)
+        loader: ({params}) => fetch(`https://assignment-10-server-nine-nu.vercel.app/painting/${params.id}`)
       },
       {
         path: "/myCraftList",
@@ -86,7 +86,7 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
           <PaintingCardDetails></PaintingCardDetails>
         </PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/painting')
+        loader: () => fetch('https://assignment-10-server-nine-nu.vercel.app/painting')
       }
     ]
   },

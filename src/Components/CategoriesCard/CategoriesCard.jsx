@@ -7,7 +7,7 @@ const CategoriesCard = () => {
     const category = id.split(' ').join('&')
     const [paintings, setPaintings] = useState([]); 
     useEffect(() => {
-        fetch(`http://localhost:5000/category/${category}`)
+        fetch(`https://assignment-10-server-nine-nu.vercel.app/category/${category}`)
         .then(res => res.json())
         .then(data => setPaintings(data))
     })
