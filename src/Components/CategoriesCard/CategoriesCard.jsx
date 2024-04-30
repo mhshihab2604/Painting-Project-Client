@@ -14,7 +14,7 @@ const CategoriesCard = () => {
     console.log(paintings);
     return (
         <div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 container mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 container mx-auto max-w-6xl">
                     {paintings?.map(painting => <PaintingCard key={painting._id} painting={painting}></PaintingCard>)}
             </div>
         </div>

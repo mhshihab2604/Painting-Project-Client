@@ -51,12 +51,12 @@ const Header = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 gap-10">
-                        <Link to="/">Home</Link>
-                        <Link to="/allArtCraft">All Art&Craft</Link>
-                        <Link to="/myCraftList">My Art&Craft</Link>
-                        <Link to="/register">Register</Link>
-                        <Link to="/userProfile">Update Profile</Link>
-                        <Link to="/addCraft">Add Craft</Link>
+                        <Link className="hover:text-white hover:bg-[#03cdb5] hover:border-2 hover:border-[#03cdb5] p-2 rounded-lg"  to="/">Home</Link>
+                        <Link className="hover:text-white hover:bg-[#03cdb5] hover:border-2 hover:border-[#03cdb5] p-2 rounded-lg" to="/allArtCraft">All Art&Craft</Link>
+                        <Link className="hover:text-white hover:bg-[#03cdb5] hover:border-2 hover:border-[#03cdb5] p-2 rounded-lg" to="/myCraftList">My Art&Craft</Link>
+                        <Link className="hover:text-white hover:bg-[#03cdb5] hover:border-2 hover:border-[#03cdb5] p-2 rounded-lg" to="/register">Register</Link>
+                        <Link className="hover:text-white hover:bg-[#03cdb5] hover:border-2 hover:border-[#03cdb5] p-2 rounded-lg" to="/userProfile">Update Profile</Link>
+                        <Link className="hover:text-white hover:bg-[#03cdb5] hover:border-2 hover:border-[#03cdb5] p-2 rounded-lg" to="/addCraft">Add Craft</Link>
                     </ul>
                 </div>
                 <div className="flex -space-x-10 items-center">
@@ -69,12 +69,12 @@ const Header = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-10">
-                    <Link to="/">Home</Link>
-                    <Link to="/allArtCraft">All Art&Craft</Link>
-                    <Link to="/myCraftList">My Art&Craft</Link>
-                    <Link to="/register">Register</Link>
-                    <Link to="/updateProfile">Update Profile</Link>
-                    <Link to="/addCraft">Add Craft</Link>
+                    <Link className="hover:text-white hover:bg-[#03cdb5] hover:border-2 hover:border-[#03cdb5] p-2 rounded-lg" to="/">Home</Link>
+                    <Link className="hover:text-white hover:bg-[#03cdb5] hover:border-2 hover:border-[#03cdb5] p-2 rounded-lg" to="/allArtCraft">All Art&Craft</Link>
+                    <Link className="hover:text-white hover:bg-[#03cdb5] hover:border-2 hover:border-[#03cdb5] p-2 rounded-lg" to="/myCraftList">My Art&Craft</Link>
+                    <Link className="hover:text-white hover:bg-[#03cdb5] hover:border-2 hover:border-[#03cdb5] p-2 rounded-lg" to="/register">Register</Link>
+                    <Link className="hover:text-white hover:bg-[#03cdb5] hover:border-2 hover:border-[#03cdb5] p-2 rounded-lg" to="/updateProfile">Update Profile</Link>
+                    <Link className="hover:text-white hover:bg-[#03cdb5] hover:border-2 hover:border-[#03cdb5] p-2 rounded-lg" to="/addCraft">Add Craft</Link>
                 </ul>
             </div>
             {

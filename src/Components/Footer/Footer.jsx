@@ -2,6 +2,7 @@ import { IoIosCall } from "react-icons/io";
 import { BiSolidMessage } from "react-icons/bi";
 import { GoClockFill } from "react-icons/go";
 import Marquee from "react-fast-marquee";
+import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <div>
@@ -16,16 +17,11 @@ const Footer = () => {
                     </div>
                 </Marquee>
             </div>
-            <footer className="p-10 bg-[#003733] text-white">
+            <footer className="bg-base-200 p-10 ">
                 <div className="footer items-center max-w-7xl mx-auto">
                     <aside className="space-y-4">
                         <p>Contact us</p>
                         <h1 className="text-2xl">Get in Touch</h1>
-                        <p>Nafshi Real Estate brings wide range of choice,steadily updated
-                            <br/>property list and market trend for you to figure out your right
-                            <br/>decision.It is a premium WordPress theme for real estate where
-                            <br/>
-                            modern aesthetics are combined with tasteful simplicity.</p>
                         <div>
                             <h1 className="flex items-center gap-2">
                                 <IoIosCall className="text-[#D1AF4B]"></IoIosCall>Call us 1-800-555-1234</h1>
@@ -34,12 +30,14 @@ const Footer = () => {
                             <h1 className="flex items-center gap-2">
                                 <GoClockFill className="text-[#D1AF4B]"></GoClockFill>Open House on the 24th, - 12 mid day to 5 pm.</h1>
                         </div>
-                        <button className="bg-[#93BB57] p-4 text-white">Schedule A Visit</button>
+                        <button className="bg-gradient-to-r from-[#03cdb5] to-[#0CBFDD] p-4 text-white">Schedule A Visit</button>
                     </aside>
                     <nav>
-                        <h6 className="footer-title">Company</h6>
+                        <h6 className="footer-title">Component</h6>
                         <a className="link link-hover">Home</a>
-                        <a className="link link-hover">All Properties</a>
+                        <a className="link link-hover">All Art&Craft</a>
+                        <a className="link link-hover">My Art&Craft</a>
+                        <a className="link link-hover">Add Craft</a>
                         <a className="link link-hover">Login</a>
                         <a className="link link-hover">Register</a>
                     </nav>
@@ -53,10 +51,11 @@ const Footer = () => {
                     </nav>
                     <nav>
                         <h6 className="footer-title">MANAGEMENT</h6>
-                        <a className="link link-hover">Estate business</a>
-                        <a className="link link-hover">Estate Window</a>
-                        <a className="link link-hover">Estate Iphone</a>
-                        <a className="link link-hover">Estate Android</a>
+                        <Link to="/painting-business" className="link link-hover">painting business</Link>
+                        <Link to="/estate-window" className="link link-hover">Estate Window</Link>
+                        <Link to="/estate-iphone" className="link link-hover">Estate Iphone</Link>
+                        <Link to="/estate-android" className="link link-hover">Estate Android</Link>
+
                     </nav>
                     <nav>
                         <h6 className="footer-title">Legal</h6>
@@ -66,9 +65,9 @@ const Footer = () => {
                     </nav>
                 </div>
             </footer>
-            <footer className="footer footer-center p-4 bg-[#93BB57] text-base-content">
+            <footer className="footer footer-center p-4 bg-gradient-to-r from-[#03cdb5] to-[#C8143A]  text-base-content">
                 <aside>
-                    <p>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
+                    <p className="text-white">Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
                 </aside>
             </footer>
     </div>

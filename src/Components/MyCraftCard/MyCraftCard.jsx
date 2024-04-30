@@ -67,7 +67,7 @@ const MyCraftCard = ({craft, crafts, setCrafts}) => {
                         </a>
                     </div>
                     <div className="flex justify-between items-center">
-                        <Link to={`/updateCraft/${_id}`}><button className="btn text-white bg-gradient-to-r from-[#03cdb5] to-[#0CBFDD]">Update Craft</button></Link>
+                        <Link to={`/myCraftUpdate/${_id}`}><button className="btn text-white bg-gradient-to-r from-[#03cdb5] to-[#0CBFDD]">Update Craft</button></Link>
                         <button onClick={() => handleDelete(_id)} className="btn text-white bg-gradient-to-r from-[#03cdb5] to-[#0CBFDD]">Delete Craft</button>
                     </div>
                 </div>
