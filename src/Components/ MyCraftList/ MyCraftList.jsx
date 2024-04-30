@@ -22,8 +22,6 @@ const MyCraftList = () => {
         console.error("Error fetching data:", error);
       });
   }, [user.email]);
-  
-
   console.log(crafts);
 
   return (

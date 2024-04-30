@@ -21,7 +21,7 @@ const Footer = () => {
                 <div className="footer items-center max-w-7xl mx-auto">
                     <aside className="space-y-4">
                         <p>Contact us</p>
-                        <h1 className="text-2xl">Get in Touch</h1>
+                        <h1 className="text-2xl">Artisan Aura</h1>
                         <div>
                             <h1 className="flex items-center gap-2">
                                 <IoIosCall className="text-[#D1AF4B]"></IoIosCall>Call us 1-800-555-1234</h1>
@@ -52,9 +52,9 @@ const Footer = () => {
                     <nav>
                         <h6 className="footer-title">MANAGEMENT</h6>
                         <Link to="/painting-business" className="link link-hover">painting business</Link>
-                        <Link to="/estate-window" className="link link-hover">Estate Window</Link>
-                        <Link to="/estate-iphone" className="link link-hover">Estate Iphone</Link>
-                        <Link to="/estate-android" className="link link-hover">Estate Android</Link>
+                        <Link to="/estate-window" className="link link-hover">painting Window</Link>
+                        <Link to="/estate-iphone" className="link link-hover">painting Iphone</Link>
+                        <Link to="/estate-android" className="link link-hover">painting Android</Link>
 
                     </nav>
                     <nav>

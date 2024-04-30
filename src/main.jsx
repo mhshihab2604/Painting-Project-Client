@@ -21,7 +21,7 @@ import CategoriesCard from './Components/CategoriesCard/CategoriesCard';
 import MyCraftList from './Components/ MyCraftList/ MyCraftList';
 import AllArtCraft from './Components/AllArtCraft/AllArtCraft';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
-import MyCraftUpdate from './Components/MyCraftUpdate/MyCraftUpdate';
+
 
 const router = createBrowserRouter([
   {
@@ -49,7 +49,9 @@ const router = createBrowserRouter([
       },
       {
         path: "/updateProfile",
-        element: <UpdateProfile></UpdateProfile>
+        element: <PrivateRoute>
+          <UpdateProfile></UpdateProfile>
+        </PrivateRoute>
       },
       {
         path: "/userProfile",
@@ -68,14 +70,6 @@ const router = createBrowserRouter([
         </PrivateRoute>,
         loader: ({params}) => fetch(`http://localhost:5000/painting/${params.id}`)
       },
-      // -------------
-      {
-        path: "/myCraftUpdate/:id",
-        element: <PrivateRoute>
-          <MyCraftUpdate></MyCraftUpdate>
-        </PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/userCraft/${params.id}`)
-      },
       {
         path: "/myCraftList",
         element: <PrivateRoute>
@@ -89,7 +83,9 @@ const router = createBrowserRouter([
       },
       {
         path: "/painting/:_id",
-        element: <PaintingCardDetails></PaintingCardDetails>,
+        element: <PrivateRoute>
+          <PaintingCardDetails></PaintingCardDetails>
+        </PrivateRoute>,
         loader: () => fetch('http://localhost:5000/painting')
       }
     ]

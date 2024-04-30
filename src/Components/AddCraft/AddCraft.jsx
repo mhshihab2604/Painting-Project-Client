@@ -10,7 +10,7 @@ const AddCraft = () => {
         const email = form.email.value;
         const item_name = form.item_name.value;
         const subcategory_name = form.subcategory_name.value;
-        const customization = form.customization.value;
+        const customization = parseInt(form.customization.value);
         const stock = form.stock.value;
         const processing_time = form.processing_time.value;
         const price = form.price.value;

@@ -5,7 +5,6 @@ import CategoryCard from '../CategoryCard/CategoryCard';
 import { Fade } from "react-awesome-reveal";
 import CraftItemCard from '../CraftItemCard/CraftItemCard';
 import WhyChoose from '../WhyChoose/WhyChoose';
-// import CraftItemsSection from '../CraftItemsSection/CraftItemsSection';
 const Home = () => {
     const [currentSlider, setCurrentSlider] = useState(0);
     const carouselImages = ['https://i.ibb.co/8cX0d6v/assign1.jpg','https://i.ibb.co/LNSzLND/assign2.jpg','https://i.ibb.co/mNTV8Rw/assign4.jpg','https://i.ibb.co/2s4dv5k/assign5.jpg'];

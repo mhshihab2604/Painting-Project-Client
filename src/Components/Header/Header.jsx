@@ -59,11 +59,11 @@ const Header = () => {
                         <Link className="hover:text-white hover:bg-[#03cdb5] hover:border-2 hover:border-[#03cdb5] p-2 rounded-lg" to="/addCraft">Add Craft</Link>
                     </ul>
                 </div>
-                <div className="flex -space-x-10 items-center">
+                <div className="flex -space-x-6 items-center">
                     <img className="w-28" src={myImage} alt="" />
                     
                     <div className="bg-gradient-to-r from-[#03cdb5] to-[#C8143A] text-transparent bg-clip-text">
-                        <a className="btn btn-ghost text-sm lg:text-2xl font-extrabold">Artisan Aura</a>
+                        <a className=" text-sm lg:text-2xl font-extrabold">Artisan Aura</a>
                     </div>
                 </div>
             </div>
